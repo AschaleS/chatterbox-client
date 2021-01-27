@@ -10,8 +10,8 @@ var RoomsView = {
   },
 
   renderRoom: function (roomname) {
-    let template = MessageView.render;
-    this.$select.append(template(roomname));
+    // let template = RoomView.render;
+    this.$select.append('<option value="' + roomname + '"></option>');
   }
 
 };
