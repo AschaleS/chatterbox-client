@@ -9,9 +9,14 @@ var RoomsView = {
   render: function () {
   },
 
-  renderRoom: function (roomname) {
-    // let template = RoomView.render;
-    this.$select.append('<option value="' + roomname + '"></option>');
+  renderRoom: function (roomName) {
+    let template = RoomView.render;
+    this.$select.append('<option value="' + roomName + '">' + roomName + '</option>');
   }
 
 };
+
+$('#rooms button').on('click', function (event) {
+  Rooms.add();
+});
+

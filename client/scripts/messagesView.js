@@ -6,6 +6,9 @@ var MessagesView = {
   },
 
   render: function () {
+    for (let i = 0; i < Messages.messagesList.length; i++) {
+      this.renderMessage(Messages.messagesList[i]);
+    }
   },
 
   renderMessage: function (message) {
@@ -14,3 +17,9 @@ var MessagesView = {
   }
 
 };
+
+$('#chats').on('click', '.userName', function () {
+  Friends.toggleStatus();
+});
+
+
