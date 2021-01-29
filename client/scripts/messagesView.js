@@ -18,7 +18,8 @@ var MessagesView = {
 
 };
 
-$('#chats').on('click', '.userName', function () {
+$('#chats').on('click', '.username', function () {
+  // console.log('called');
   Friends.toggleStatus();
 });
 
