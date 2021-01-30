@@ -29,5 +29,6 @@ var FormView = {
 };
 
 $('button.refresh').on('click', function (event) {
+  $('#chats').html('');
   App.fetch();
 });

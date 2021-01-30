@@ -1,5 +1,5 @@
 var Friends = {
-  toggleStatus: function (userName) {
+  toggleStatus: function (username) {
     /*console.log(this);
     if (!this.friends.hasOwnProperty(userName)) {
       this.friends[userName] = userName;
