@@ -5,6 +5,10 @@ var Friends = {
       this.friends[userName] = userName;
     }
     console.log(this.friends); */
+    if (Friends[username]) {
+      delete Friends[username];
+    } else {
+      Friends[username] = username;
+    }
   }
-
 };

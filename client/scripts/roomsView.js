@@ -30,3 +30,10 @@ var addRoom = function (roomName) {
   }
 };
 
+var addFriend = function (friendName) {
+  // console.log(friendName);
+  /* if (!Friends.hasOwnProperty(friendName)) {
+    Friends[friendName] = friendName;
+  } */
+  MessagesView.render();
+};

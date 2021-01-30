@@ -13,8 +13,18 @@ var MessagesView = {
       }
     });
 
+    //reset message list on html page before rendering new messages
+    $('#chats').html('');
+
     for (let i = 0; i < messages.length; i++) {
       this.renderMessage(Messages.messagesList[i]);
+      let friendName = Messages.messagesList[i].username;
+      if (Friends.hasOwnProperty(friendName)) {
+        // Friends[friendName] = friendName;
+        // console.log(friendName);
+        $(`.chat:contains(${friendName})`).css('text-decoration', 'underline');
+        // $('div:contains(`${friendName}`)').css('text-decoration', 'underline');
+      }
     }
   },
 
@@ -29,7 +39,11 @@ var MessagesView = {
 
 $('#chats').on('click', '.username', function () {
   // console.log('called');
-  Friends.toggleStatus();
+  let friendName = $(this).text();
+  Friends.toggleStatus(friendName);
+  addFriend(friendName);
+
+  // addFriend($(this).text());
 });
 
 
